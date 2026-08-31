@@ -12,6 +12,7 @@ import {
 } from "../api";
 import Loading from "../components/loading";
 
+
 function Home() {
   const [games, setGames] = useState([]);
   const [genres, setGenres] = useState([]);
