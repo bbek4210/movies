@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import GameCard from "../components/GameCard";
 import GenreList from "../components/GenreList";
-import Loading from "../components/Loading";
 
 import {
   getGames,
@@ -11,6 +10,7 @@ import {
   getGenres,
   getGamesByGenre,
 } from "../api";
+import Loading from "../components/loading";
 
 function Home() {
   const [games, setGames] = useState([]);
@@ -143,7 +143,7 @@ function Home() {
           <span>{games.length} Games</span>
         </div>
 
-        {loading ? (
+        {Loading ? (
           <Loading />
         ) : error ? (
           <div className="error">
