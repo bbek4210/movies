@@ -10,7 +10,7 @@ import {
   getGenres,
   getGamesByGenre,
 } from "../api";
-import Loading from "../components/loading";
+import Loading from "../components/Loading";
 
 
 function Home() {
@@ -144,7 +144,7 @@ function Home() {
           <span>{games.length} Games</span>
         </div>
 
-        {Loading ? (
+        {loading ? (
           <Loading />
         ) : error ? (
           <div className="error">
